@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ElevatorSimulator.vcxproj" Id="6023b4e8-3841-4340-a3a5-fd2032a52ef3" />
+</Solution>
