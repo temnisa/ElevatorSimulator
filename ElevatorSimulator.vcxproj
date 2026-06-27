@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="elevator.c" />
+    <ClCompile Include="input.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="src\display.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\display.h" />
+    <ClInclude Include="src\elevator.h" />
+    <ClInclude Include="src\input.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,9 +149,6 @@
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ElevatorSimulator.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
