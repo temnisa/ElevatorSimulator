@@ -22,23 +22,23 @@ typedef struct {
 } ElevatorData;
 
 // エレベーターのデータを初期化する関数
-void init_elevator(ElevatorData* elevator);
+void Elevator_Init(ElevatorData* elevator);
 
-// エレベーターの目標階数を設定する関数
-void set_target_floor(ElevatorData* elevator, int target_floor);
+// エレベーターの目標階を設定する関数
+void Elevator_SetTargetFloor(ElevatorData* elevator, int target_floor);
 
 // エレベーターの状態を更新する関数
 // この関数は、状態遷移およびタイマー更新を行う
-void update_elevator(ElevatorData* elevator);
+void Elevator_Update(ElevatorData* elevator);
 
 // エレベーターの現在階数を取得する関数
-int get_current_floor(ElevatorData* elevator);
+int Elevator_GetCurrentFloor(ElevatorData* elevator);
 
 // エレベーターの現在状態を取得する関数
-ElevatorState get_current_state(ElevatorData* elevator);
+ElevatorState Elevator_GetCurrentState(ElevatorData* elevator);
 
-// エレベーターの目標階数を取得する関数
-int get_target_floor(ElevatorData* elevator);
+// エレベーターの目標階を取得する関数
+int Elevator_GetTargetFloor(ElevatorData* elevator);
 
 
 #endif 
