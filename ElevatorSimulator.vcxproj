@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="elevator.c" />
-    <ClCompile Include="input.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="src\display.c" />
+    <ClCompile Include="src\elevator.c" />
+    <ClCompile Include="src\input.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\display.h" />
