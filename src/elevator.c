@@ -29,3 +29,27 @@ void Elevator_SetTargetFloor(ElevatorData* elevator, int target_floor) {
 	elevator->target_floor = target_floor;
 
 }
+
+// エレベーターの状態を更新する関数
+void Elevator_Update(ElevatorData* elevator) {
+
+	switch (elevator->current_state) {
+	case STOP:
+		if (elevator->target_floor == TARGET_NOT_SET) {
+			// 目標階が未設定の場合は何もしない
+			return;
+		}
+		if (elevator->target_floor > elevator->current_floor) {
+			elevator->current_state = MOVING_UP;
+
+		}
+		else {
+			elevator->current_state = MOVING_DOWN;
+		}
+		break;
+
+	default:
+		break;
+	}
+	
+}
