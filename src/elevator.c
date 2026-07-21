@@ -49,7 +49,7 @@ void Elevator_Update(ElevatorData* elevator) {
 		break;
 
 	case MOVING_UP:
-
+		
 		elevator->move_timer++;
 
 		if (elevator->move_timer >= 10) {
@@ -83,6 +83,24 @@ void Elevator_Update(ElevatorData* elevator) {
 				// ドアタイマーを初期化
 				elevator->door_timer = 0;
 			}
+		}
+		break;
+
+	case DOOR_OPEN:
+
+		// ドアが開いている状態では、ドアタイマーをカウントアップする
+		elevator->door_timer++;
+
+		// ドアが開いてから3秒経過したらドアを閉める
+		if (elevator->door_timer >= 30) {
+			// 目標階を未設定に戻す
+			elevator->target_floor = TARGET_NOT_SET;
+
+			// ドアタイマーを初期化
+			elevator->door_timer = 0;
+
+			// ドアを閉めて停止状態に戻す
+			elevator->current_state = STOP;
 		}
 		break;
 
