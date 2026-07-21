@@ -48,8 +48,30 @@ void Elevator_Update(ElevatorData* elevator) {
 		}
 		break;
 
+	case MOVING_UP:
+
+		elevator->move_timer++;
+
+		if (elevator->move_timer >= 10) {
+			// 1秒経過したら階数を上げる
+			elevator->current_floor++;
+			// タイマーを初期化
+			elevator->move_timer = 0;
+
+			// 目標階に到達したらドアを開ける
+			if (elevator->current_floor == elevator->target_floor) {
+				elevator->current_state = DOOR_OPEN;
+				// ドアを開けるタイマーを初期化
+				elevator->door_timer = 0;
+			}
+
+		}
+
+		break;
+
+
 	default:
 		break;
 	}
-	
+
 }
