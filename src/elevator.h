@@ -9,6 +9,9 @@ typedef enum {
 	DOOR_OPEN,		//3
 } ElevatorState;
 
+// エレベーターの状態を文字列に変換する関数
+const char* Elevator_GetStateName(ElevatorState state);
+
 // エレベーターのデータを定義
 typedef struct {
 	int current_floor;				// 現在の階数

@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include "elevator.h"
 
 #define TARGET_NOT_SET 0 // 未設定を表す定数
@@ -108,4 +108,20 @@ void Elevator_Update(ElevatorData* elevator) {
 		break;
 	}
 
+}
+
+// エレベーターの状態を文字列に変換する関数
+const char* Elevator_GetStateName(ElevatorState state) {
+	switch (state) {
+	case STOP:
+		return "STOP";
+	case MOVING_UP:
+		return "MOVING_UP";
+	case MOVING_DOWN:
+		return "MOVING_DOWN";
+	case DOOR_OPEN:
+		return "DOOR_OPEN";
+	default:
+		return "不明な状態";
+	}
 }
