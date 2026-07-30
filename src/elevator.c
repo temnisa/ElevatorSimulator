@@ -1,7 +1,6 @@
 ﻿#include <stdio.h>
 #include "elevator.h"
 
-#define TARGET_NOT_SET 0 // 未設定を表す定数
 
 // エレベーターのデータを初期化する関数
 void Elevator_Init(ElevatorData* elevator) {

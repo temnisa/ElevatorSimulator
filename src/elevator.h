@@ -1,5 +1,11 @@
-#ifndef _ELEVATOR_H_
+﻿#ifndef _ELEVATOR_H_
 #define _ELEVATOR_H_
+
+// エレベーターの目標階が未設定であることを表す定数
+#define TARGET_NOT_SET 0
+
+// バッファサイズの定義
+#define BUFFER_SIZE 100
 
 // エレベーターの状態を表す列挙型
 typedef enum {
