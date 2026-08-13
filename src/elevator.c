@@ -1,5 +1,4 @@
-﻿#include <stdio.h>
-#include "elevator.h"
+﻿#include "elevator.h"
 
 
 // エレベーターのデータを初期化する関数

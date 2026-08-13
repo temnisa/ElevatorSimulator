@@ -8,19 +8,54 @@
 
 ---
 
-## 管理データ一覧
+## 2. 管理データ一覧
 
-| 項目名          | 内容       |
-| ------------ | -------- |
-| currentFloor | 現在階      |
-| targetFloor  | 目標階      |
-| state        | 現在状態     |
-| doorTimer    | ドア開放時間管理 |
-| moveTimer    | 移動時間管理   |
+| 項目名        | 内容       |
+| --------------| -----------|
+| current_floor | 現在階      |
+| target_floor  | 目標階      |
+| current_state | 現在状態     |
+| door_timer    | ドア開放時間管理 |
+| move_timer    | 移動時間管理   |
 
 ---
 
-## currentFloor
+## 3. 定数
+
+### TARGET_NOT_SET
+
+説明
+
+目標階が未設定であることを表す定数。
+
+値
+
+0
+
+用途
+
+目標階が設定されていない状態を表す。
+
+---
+
+## 4. ElevatorState（列挙型）
+
+### 目的
+
+エレベーターの動作状態を管理する。
+
+| 状態 | 説明 |
+|------|------|
+| STOP | 停止状態 |
+| MOVING_UP | 上昇中 |
+| MOVING_DOWN | 下降中 |
+| DOOR_OPEN | ドア開放中 |
+
+---
+
+## 5. 各メンバーの詳細
+
+### current_floor
 
 ### 説明
 
@@ -36,7 +71,7 @@
 
 ---
 
-## targetFloor
+### target_floor
 
 ### 説明
 
@@ -48,11 +83,11 @@
 
 ### 初期値
 
-1
+TARGET_NOT_SET（0）
 
 ---
 
-## state
+### current_state
 
 ### 説明
 
@@ -71,7 +106,7 @@ STOP
 
 ---
 
-## doorTimer
+### door_timer
 
 ### 説明
 
@@ -79,7 +114,7 @@ STOP
 
 ### 単位
 
-秒
+100ms（10カウントで1秒）
 
 ### 初期値
 
@@ -91,7 +126,7 @@ DOOR_OPEN状態で使用する。
 
 ---
 
-## moveTimer
+### move_timer
 
 ### 説明
 
@@ -99,7 +134,7 @@ DOOR_OPEN状態で使用する。
 
 ### 単位
 
-秒
+100ms（10カウントで1秒）
 
 ### 初期値
 
@@ -111,15 +146,15 @@ MOVING_UPおよびMOVING_DOWN状態で使用する。
 
 ---
 
-## 状態とデータの関係
+## 6. 状態とデータの関係
 
 ### STOP
 
 使用データ
 
-* currentFloor
-* targetFloor
-* state
+* current_floor
+* target_floor
+* current_state
 
 ---
 
@@ -127,10 +162,10 @@ MOVING_UPおよびMOVING_DOWN状態で使用する。
 
 使用データ
 
-* currentFloor
-* targetFloor
-* state
-* moveTimer
+* current_floor
+* target_floor
+* current_state
+* move_timer
 
 ---
 
@@ -138,10 +173,10 @@ MOVING_UPおよびMOVING_DOWN状態で使用する。
 
 使用データ
 
-* currentFloor
-* targetFloor
-* state
-* moveTimer
+* current_floor
+* target_floor
+* current_state
+* move_timer
 
 ---
 
@@ -149,12 +184,13 @@ MOVING_UPおよびMOVING_DOWN状態で使用する。
 
 使用データ
 
-* state
-* doorTimer
+* current_state
+* door_timer
+* target_floor
 
 ---
 
-## タイマー仕様
+## 7. タイマー仕様
 
 ### 移動時間
 

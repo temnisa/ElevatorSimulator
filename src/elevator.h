@@ -40,14 +40,14 @@ void Elevator_SetTargetFloor(ElevatorData* elevator, int target_floor);
 // この関数は、状態遷移およびタイマー更新を行う
 void Elevator_Update(ElevatorData* elevator);
 
-// エレベーターの現在階数を取得する関数
-int Elevator_GetCurrentFloor(ElevatorData* elevator);
-
-// エレベーターの現在状態を取得する関数
-ElevatorState Elevator_GetCurrentState(ElevatorData* elevator);
-
-// エレベーターの目標階を取得する関数
-int Elevator_GetTargetFloor(ElevatorData* elevator);
+//// エレベーターの現在階数を取得する関数
+//int Elevator_GetCurrentFloor(ElevatorData* elevator);
+//
+//// エレベーターの現在状態を取得する関数
+//ElevatorState Elevator_GetCurrentState(ElevatorData* elevator);
+//
+//// エレベーターの目標階を取得する関数
+//int Elevator_GetTargetFloor(ElevatorData* elevator);
 
 
 #endif 
