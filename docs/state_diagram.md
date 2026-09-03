@@ -17,15 +17,15 @@ STOP（停止中）
 MOVING_UP（上昇中）
  └─ 目標階に到達
       └→ DOOR_OPEN（ドア開放中）
-
+```
 ## MOVING_DOWN
-
+```text
 MOVING_DOWN（下降中）
  └─ 目標階に到達
       └→ DOOR_OPEN（ドア開放中）
-
+```
 ## DOOR_OPEN
-
+```text
 DOOR_OPEN（ドア開放中）
  └─ 3秒経過
       └→ STOP（停止中）
