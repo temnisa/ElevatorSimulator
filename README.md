@@ -45,24 +45,24 @@ C言語で作成したエレベーター制御シミュレータです。
 ```text
 ElevatorSimulator/
 ├─ src/
-｜	 ├─ display.c
-｜	 ├─ display.h
-｜	 ├─ elevator.c
-｜	 ├─ elevator.h
-｜   ├─ input.c
-｜   ├─ input.h
-｜	 └─ main.c
+|   ├─ display.c
+|   ├─ display.h
+|   ├─ elevator.c
+|   ├─ elevator.h
+|   ├─ input.c
+|   ├─ input.h
+|   └─ main.c
 ├─ docs/
-｜	 ├─ data_design.md
-｜	 ├─ design_review.md
-｜	 ├─ implementation_plan.md
-｜	 ├─ interface_design.md
-｜	 ├─ main_flow.md
-｜	 ├─ module_design.md
-│   ├─ requirements.md
-│   ├─ software_architecture.md
-│   ├─ state_diagram.md
-│   └─ test_cases.md
+|    ├─ data_design.md
+|    ├─ design_review.md
+|    ├─ implementation_plan.md
+|    ├─ interface_design.md
+|    ├─ main_flow.md
+|    ├─ module_design.md
+|    ├─ requirements.md
+|    ├─ software_architecture.md
+|    ├─ state_diagram.md
+|    └─ test_cases.md
 └─ README.md
 ```
 
